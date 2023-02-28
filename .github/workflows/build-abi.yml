@@ -37,6 +37,7 @@ jobs:
         run: |
           meson setup _build -Dunit_testing=false --prefix=/usr
           meson compile -C _build
+          meson install -C _build --destdir ../tmproot
 
       # Abigail ABI checker
       - name: Check ABI compatibility
